@@ -16,6 +16,22 @@
             <li><button onclick="DarkModeButton()" id = "DarkModeButton"><i class="fas fa-moon"></i>Dark Mode</button></li>
         </ul>
     </nav>
+    <div class ="filterRegion">
+        <div class="dropdown">
+            <button class="dropbtn">Filter By Region</button>
+            <div class="dropdown-content">
+              <a href="#" onclick="Filter('')">All</a>
+              <a href="#" onclick="Filter('Asia')">Asia</a>
+              <a href= "#" onclick="Filter('Africa')">Africa</a>
+              <a href="#" onclick="Filter('Antarctica')">Antarctica</a>
+              <a href="#" onclick="Filter('Europe')">Europe</a>
+              <a href="#" onclick="Filter('North America')">North America</a>
+              <a href="#" onclick="Filter('South America')">South America</a>
+              <a href="#" onclick="Filter('Oceania')">Oceania</a>
+            </div>
+          </div>
+    </div>
+    
     <div class="list_country" id ="country_list"></div>
 </body>
 </html>
