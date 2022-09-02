@@ -83,11 +83,14 @@ function Filter(region){
     console.log(region);
     var countrydiv = document.getElementsByClassName('country');
     for(var i=0;i<countrydiv.length;i++){
-        if(countrydiv[i].childNodes[4].childNodes[1].innerText.trim() === region){
-            countrydiv[i].style="";
+        if(countrydiv[i].childNodes[4].childNodes[1].innerText.trim() !== region){
+            countrydiv[i].style="display:none;";
         }
         else{
-            countrydiv[i].style="display:none;";
+            countrydiv[i].style="";
+        }
+        if(region === ""){
+            countrydiv[i].style="";
         }
     console.log( countrydiv[i].childNodes[4].childNodes[1].innerText);
 
