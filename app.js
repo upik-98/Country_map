@@ -72,13 +72,13 @@ function DarkModeButton(){
         root_variable.style.setProperty('--nav-background', 'black');
         root_variable.style.setProperty('--text-color', 'white');
         root_variable.style.setProperty('--box-background', 'grey');
-        darkModeText.innerHTML="Dark Mode";
+        darkModeText.innerHTML="<i class='fas fa-moon'></i>Light Mode";
     }else{
         root_variable.style.setProperty('--background', '#ededed');
         root_variable.style.setProperty('--nav-background', 'white');
         root_variable.style.setProperty('--text-color', 'black');
         root_variable.style.setProperty('--box-background', 'white');
-        darkModeText.innerHTML="Light Mode";
+        darkModeText.innerHTML="<i class='fas fa-moon'></i>Dark Mode";
     }
     switch_dark_mode+=1;
 }

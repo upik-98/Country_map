@@ -525,5 +525,13 @@ button:hover{
   float: right;
   padding: 7px;
   color: var(--text-color);
-  background-color: var(--nav-background);
+  background-color: var(--box-background);
+}
+
+.searchBar::placeholder{
+  color: var(--text-color);
+}
+
+.searchBar:hover{
+  cursor: pointer;
 }
