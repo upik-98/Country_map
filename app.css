@@ -415,6 +415,7 @@ button:hover{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  min-height: 100vh;
   background-color: var(--background);
   -webkit-transition: background-color 700ms linear;
   -ms-transition: background-color 700ms linear;
@@ -425,6 +426,7 @@ button:hover{
 }
 
 .country{
+  max-height: 250px;
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -507,8 +509,21 @@ button:hover{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: var(--background);}
+.dropdown-content a:hover {background-color: var(--background);
+}
+
+.dropbtn:hover{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+.searchBar{
+  width: 30%;
+  float: right;
+  padding: 7px;
+  color: var(--text-color);
+  background-color: var(--nav-background);
+}

@@ -65,17 +65,20 @@ function buildHTMLTag(imgURL, country){
 }
 var switch_dark_mode=0;
 function DarkModeButton(){
+    var darkModeText = document.getElementById("DarkModeButton");
     var root_variable = document.querySelector(':root');
     if(switch_dark_mode%2==0){
         root_variable.style.setProperty('--background', 'black');
         root_variable.style.setProperty('--nav-background', 'black');
         root_variable.style.setProperty('--text-color', 'white');
         root_variable.style.setProperty('--box-background', 'grey');
+        darkModeText.innerHTML="Dark Mode";
     }else{
         root_variable.style.setProperty('--background', '#ededed');
         root_variable.style.setProperty('--nav-background', 'white');
         root_variable.style.setProperty('--text-color', 'black');
         root_variable.style.setProperty('--box-background', 'white');
+        darkModeText.innerHTML="Light Mode";
     }
     switch_dark_mode+=1;
 }
@@ -92,11 +95,27 @@ function Filter(region){
         if(region === ""){
             countrydiv[i].style="";
         }
-    console.log( countrydiv[i].childNodes[4].childNodes[1].innerText);
-
+    console.log(i, countrydiv[i].childNodes[4].childNodes[1].innerText);
     }
-    //console.log(countrydiv[0].childNodes[4].childNodes[1], countrydiv[6].childNodes[4].childNodes[1].innerHTML);
 }
+
+function searchCountryList(){
+    var countrydiv = document.getElementsByClassName('country');
+    var searchValue = document.getElementById('searchBar');
+    console.log(searchValue.value);
+    for(var i=0;i<countrydiv.length;i++){
+        var country_name = countrydiv[i].childNodes[1].innerText.toLowerCase();
+        if(country_name.indexOf(searchValue.value.toLowerCase()) === -1){
+            countrydiv[i].style="display:none;";
+        }
+        else{
+            countrydiv[i].style="";
+        }
+        console.log(country_name);
+    }
+}
+
+
 
 function setCookie(name,value,days) {
     var expires = "";
