@@ -431,7 +431,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   margin:10px;
-  border: 2px solid var(--text-color);
+  box-shadow: var(--box_shadow) 0px 5px 15px;
   background-color: var(--box-background);
   -webkit-transition: background-color 700ms linear;
   -ms-transition: background-color 700ms linear;
@@ -462,6 +462,7 @@ button:hover{
 }
 
 :root{
+  --box_shadow: rgba(0, 0, 0, 0.55);
   --nav-background: white;
   --background: #ededed;
   --text-color: black;
